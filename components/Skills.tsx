@@ -1,76 +1,103 @@
 'use client'
-
 import { motion } from 'framer-motion'
-import { FaJs, FaPython, FaReact, FaNodeJs, FaDocker, FaGit, FaAws } from 'react-icons/fa'
-import { SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiVuedotjs, SiJira, SiPostman } from 'react-icons/si'
-import { AiOutlineHtml5 } from 'react-icons/ai'
-import { BiLogoPostgresql } from 'react-icons/bi'
 
-const skills = [
-  { name: 'React.js', icon: FaReact },
-  { name: 'Next.js', icon: SiNextdotjs },
-  { name: 'Node.js', icon: FaNodeJs },
-  { name: 'JavaScript', icon: FaJs },
-  { name: 'Express', icon: SiExpress },
-
-  { name: 'TypeScript', icon: SiTypescript },
-  { name: 'HTML/CSS', icon: AiOutlineHtml5 },
-  { name: 'SQL', icon: BiLogoPostgresql },
-  { name: 'MongoDB', icon: SiMongodb },
-  { name: 'MySQL', icon: SiMysql },
-  { name: 'Python', icon: FaPython },
-  { name: 'React Native', icon: FaReact },
-  { name: 'Pandas', icon: SiPostman }, // placeholder
-  { name: 'NumPy', icon: SiPostman }, // placeholder
-  { name: 'AWS', icon: FaAws },
+const skillGroups = [
+  {
+    category: 'Frontend',
+    icon: '🎨',
+    skills: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Vue.js', 'React Native'],
+  },
+  {
+    category: 'Backend',
+    icon: '⚙️',
+    skills: ['Node.js', 'Express.js', 'REST APIs', 'Socket.IO', 'JWT/RBAC'],
+  },
+  {
+    category: 'Database',
+    icon: '🗄️',
+    skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Redis'],
+  },
+  {
+    category: 'Cloud & DevOps',
+    icon: '☁️',
+    skills: ['AWS', 'VPS/Linux', 'Docker', 'Vercel', 'Razorpay', 'Stripe'],
+  },
+  {
+    category: 'Data & Tools',
+    icon: '📊',
+    skills: ['Python', 'Pandas', 'NumPy', 'Git', 'Postman', 'Jira'],
+  },
 ]
 
-const Skills = () => {
+export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-gray-900">
+    <section id="skills" className="py-24" style={{ background: 'var(--bg-secondary)' }}>
       <div className="max-w-7xl mx-auto px-8 sm:px-16 lg:px-28">
+
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Technical Skills</h2>
-          <p className="text-gray-400 text-lg">Technologies I work with</p>
+          <p className="text-sm mb-3" style={{ color: 'var(--accent)', fontFamily: 'var(--font-jetbrains), monospace' }}>
+            02. Skills
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-syne), sans-serif' }}>
+            Technical Skills
+          </h2>
+          <p className="text-lg" style={{ color: 'var(--text-secondary)' }}>Technologies I work with</p>
         </motion.div>
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.2
-              }
-            }
-          }}
-        >
-          {skills.map((skill, index) => (
+
+        {/* Groups */}
+        <div className="space-y-12">
+          {skillGroups.map((group, gi) => (
             <motion.div
-              key={skill.name}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 text-center group"
+              key={group.category}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: gi * 0.1 }}
+              viewport={{ once: true }}
             >
-              <skill.icon className="w-8 h-8 mx-auto mb-4 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
-              <h3 className="text-white font-semibold">{skill.name}</h3>
+              {/* Category header */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xl">{group.icon}</span>
+                <h3 className="text-lg font-semibold" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-syne), sans-serif' }}>
+                  {group.category}
+                </h3>
+                <div className="flex-1 h-px" style={{ background: 'var(--card-border)' }} />
+              </div>
+
+              {/* Pills */}
+              <div className="flex flex-wrap gap-3">
+                {group.skills.map((skill, si) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.05, boxShadow: '0 0 12px var(--accent-glow)' }}
+                    transition={{ duration: 0.3, delay: si * 0.04 }}
+                    viewport={{ once: true }}
+                    className="px-4 py-2 rounded-full text-sm cursor-default transition-all duration-200"
+                    style={{
+                      background: 'var(--bg-card)',
+                      border: '1px solid var(--border)',
+                      color: 'var(--text-primary)',
+                      fontFamily: 'var(--font-jetbrains), monospace',
+                      backdropFilter: 'blur(8px)',
+                    }}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
 }
-
-export default Skills
