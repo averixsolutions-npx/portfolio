@@ -18,6 +18,71 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'Zapllo AI — Automation Platform',
+    category: 'SaaS · AI Automation',
+    filterTag: 'SaaS',
+    featured: true,
+    description:
+      'AI-powered business automation suite — workflow builders, AI agents, and integrations that cut manual operations for teams.',
+    tech: ['Next.js', 'Node.js', 'MongoDB', 'AI/LLM APIs'],
+    liveLink: 'https://ai.zapllo.com',
+    codeLink: null,
+    rating: null,
+    testimonial: null,
+  },
+  {
+    name: 'Zaptick — Developer Platform',
+    category: 'SaaS · Developer Tools',
+    filterTag: 'SaaS',
+    featured: false,
+    description:
+      'Developer-facing platform and API documentation portal — auth, API reference, and integration tooling for third-party developers.',
+    tech: ['Next.js', 'REST APIs', 'Node.js', 'TypeScript'],
+    liveLink: 'https://developers.zaptick.io',
+    codeLink: null,
+    rating: null,
+    testimonial: null,
+  },
+  {
+    name: 'Janmat — Digital Voting Platform',
+    category: 'Civic Tech · Web App',
+    filterTag: 'Web App',
+    featured: false,
+    description:
+      'Secure, transparent online voting for communities and institutions — real-time results, voter verification, and tamper-proof audit logs.',
+    tech: ['Next.js', 'PostgreSQL', 'Redis', 'AWS'],
+    liveLink: 'https://sgentreprises.com/',
+    codeLink: null,
+    rating: null,
+    testimonial: null,
+  },
+  {
+    name: 'StitchTrack — Tailor Management System',
+    category: 'SaaS · Business Tool',
+    filterTag: 'SaaS',
+    featured: false,
+    description:
+      'End-to-end order tracking for tailors and boutiques — measurements, order status, payments, and a loyal client database in one dashboard.',
+    tech: ['React', 'Express.js', 'MySQL'],
+    liveLink: null,
+    codeLink: null,
+    rating: null,
+    testimonial: null,
+  },
+  {
+    name: 'Averix Solutions — Company Platform',
+    category: 'Web · Corporate',
+    filterTag: 'Web App',
+    featured: false,
+    description:
+      'Marketing and product platform for Averix Solutions — AI automation services, products, and client onboarding.',
+    tech: ['Next.js', 'Tailwind CSS', 'Vercel'],
+    liveLink: 'https://www.averixsolutions.co.in',
+    codeLink: null,
+    rating: null,
+    testimonial: null,
+  },
+  {
     name: 'ApnaBot — WhatsApp Automation',
     category: 'SaaS · AI Automation',
     filterTag: 'SaaS',
@@ -25,7 +90,7 @@ const projects: Project[] = [
     description:
       'A powerful WhatsApp automation platform for businesses. Auto-reply to customers, capture bookings, process payments via Razorpay, manage product catalogs, and track all conversations from a unified dashboard.',
     tech: ['Node.js', 'WhatsApp Business API', 'Razorpay', 'React'],
-    liveLink: 'https://www.averixsolutions.co.in/#',
+    liveLink: 'https://www.averixsolutions.co.in',
     codeLink: null,
     rating: 5.0,
     testimonial: {
@@ -61,7 +126,7 @@ const projects: Project[] = [
     description:
       'Built exclusively for the driver community. Connects drivers, manages ride assignments, tracks daily earnings, and builds a reliable local transport network.',
     tech: ['Flutter', 'Firebase', 'Google Maps API'],
-    liveLink: 'https://www.averixsolutions.co.in/#',
+    liveLink: 'https://play.google.com/store/apps/details?id=com.quickcabpune.quickcab&hl=en_IN',
     codeLink: null,
     rating: 4.9,
     testimonial: {

@@ -3,11 +3,24 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
+    role: 'CEO & Software Developer',
+    company: 'Averix Solutions Pvt. Ltd.',
+    period: 'Apr 2026 – Present',
+    location: 'Pune, India',
+    badge: '🚀 Current',
+    color: '#00d4ff',
+    responsibilities: [
+      'Founded and lead Averix Solutions — driving product strategy, engineering, and client delivery for AI automation and full-stack SaaS products',
+      'Architect and ship production systems end-to-end: WhatsApp automation (ApnaBot), employee management (SG-EMS), and developer-facing API platforms',
+      'Own the full technical stack across Next.js, Node.js, and MongoDB while managing business operations and the development team',
+    ],
+  },
+  {
     role: 'MERN Team Lead — Backend & API Integration',
     company: 'Codestrup Infotech',
-    period: 'Feb 2026 – Present',
+    period: 'Feb 2026 – Mar 2026',
     location: 'Remote',
-    badge: '🔥 Current',
+    badge: null,
     color: '#00d4ff',
     responsibilities: [
       'Led backend and frontend team on large-scale MERN ecosystem (Playmate), designing and delivering 600+ REST APIs across booking, payments, social, and real-time systems',

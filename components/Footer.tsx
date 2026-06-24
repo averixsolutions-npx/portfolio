@@ -39,7 +39,7 @@ export default function Footer() {
             <FaLinkedin size={18} />
           </a>
           <a
-            href="mailto:adityagavali0911@gmail.com"
+            href="mailto:aditya@averixsolutions.co.in"
             className="transition-all duration-200 hover:scale-110"
             style={{ color: 'var(--text-muted)' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-jetbrains), monospace' }}>
-          Built with Next.js + Framer Motion
+          Built by Aditya Gavali · Averix Solutions · Next.js + Framer Motion
         </p>
 
       </div>

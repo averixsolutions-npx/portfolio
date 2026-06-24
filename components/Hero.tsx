@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const roles = [
-  'Full Stack Developer',
+  'CEO @ Averix Solutions',
   'MERN Team Lead',
   'API Architect',
   'Backend Engineer',
@@ -14,7 +14,7 @@ const roles = [
 const stats = [
   { value: 2,   suffix: '+', label: 'Years Experience' },
   { value: 2000, suffix: '+', label: 'APIs Built' },
-  { value: 4,   suffix: '',  label: 'Companies' },
+  { value: 5,   suffix: '',  label: 'Companies' },
   { value: 13,   suffix: '+', label: 'Projects Shipped' },
 ]
 
@@ -123,7 +123,7 @@ export default function Hero() {
            onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}>
           <FaLinkedin size={20} />
         </a>
-        <a href="mailto:adityagavali0911@gmail.com"
+        <a href="mailto:aditya@averixsolutions.co.in"
            className="transition-all duration-300 hover:scale-110"
            style={{ color: 'var(--text-muted)' }}
            onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
@@ -170,9 +170,9 @@ export default function Hero() {
             </h2>
 
             <p className="max-w-xl leading-relaxed mb-10" style={{ color: 'var(--text-secondary)' }}>
-              Full-Stack MERN Developer and Technical Team Lead with 2+ years building scalable,
-              production-ready applications. I specialize in React, Next.js, Node.js, and MongoDB,
-              with expertise in API design, database architecture, and workflow automation.
+              CEO & Software Developer at Averix Solutions. I build scalable, production-ready
+              systems — AI automation, SaaS platforms, and REST APIs — across React, Next.js,
+              Node.js, and MongoDB.
             </p>
 
             {/* Stats */}

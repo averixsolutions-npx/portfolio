@@ -86,7 +86,7 @@ export default function Contact() {
 
             <div className="space-y-4">
               {[
-                { icon: FaEnvelope, label: 'adityagavali0911@gmail.com', href: 'mailto:adityagavali0911@gmail.com' },
+                { icon: FaEnvelope, label: 'aditya@averixsolutions.co.in', href: 'mailto:aditya@averixsolutions.co.in' },
                 { icon: FaPhone,    label: '+91-8600256200',             href: 'tel:+918600256200' },
                 { icon: FaMapMarkerAlt, label: 'Pune, Maharashtra, India', href: null },
               ].map(({ icon: Icon, label, href }) => (

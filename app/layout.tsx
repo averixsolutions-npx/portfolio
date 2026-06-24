@@ -20,9 +20,9 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Aditya Gavali — Full Stack Developer',
+  title: 'Aditya Gavali — CEO & Full-Stack Developer',
   description:
-    'Portfolio of Aditya Gavali, MERN Team Lead specializing in scalable full-stack applications, REST APIs, and cloud deployments.',
+    'CEO & Software Developer at Averix Solutions. Full-stack engineer specializing in AI automation, scalable SaaS, REST APIs, and distributed systems.',
 }
 
 export default function RootLayout({
